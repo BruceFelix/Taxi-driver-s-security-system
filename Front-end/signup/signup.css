@@ -99,3 +99,37 @@ input[type=submit]{
 #submission:hover{
    background-color: red;
 }
+@media screen and (max-width: 800px) {
+    /* main{
+        width: 100%;
+    } */
+    .company-div{
+        width: 100%;
+    }
+    .sign-up{
+        width: 100%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+      }
+    input[type=submit]{
+        width: 45%;
+        font-size: 10px;
+        padding: 5px;
+        float: left;
+    }
+    #submission:hover{
+        background-color: red;
+     }
+     .sign-up a {
+        float: left;
+        width: 50%;
+        padding: 4px 1px 5px 0;
+        display: inline-block;
+        text-decoration: none;
+        color: rgb(36, 34, 34);
+        margin: 5px;
+        font-size: 12px;
+    }
+}
