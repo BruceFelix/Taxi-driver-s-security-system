@@ -41,36 +41,9 @@ li a{
 }
 .nav-bar{
     position: absolute;
-    right: 40px;
+    left: 500px;
 }
 .nav-bar a:hover{
-    text-shadow: 1px 1px 2px #04044A, 0 0 25px #04044A, 0 0 5px #04044A;
-    color: wheat;
-}
-.my-divs{
-    width: 600px;
-    height: 270px;
-    background-color: #04044A;
-    margin: 20px 30px;
-    float: left;
-    text-align: center;
-    text-justify: center;
-    border-radius: 30px;
-    /* box-shadow: 12px 4px 20px #04044A; */
-}
-.my-divs:hover{
-    box-shadow: 30px 5px 20px #020229;
-}
-.my-divs a{
-    text-decoration: none;
-    font-size: xx-large;
-    position: relative;
-    top: 100px;
-}
-.my-divs a:hover{
     text-shadow: 1px 1px 2px black, 0 0 25px #04044A, 0 0 5px #04044A;
-    color: rgb(238, 122, 14);
-}
-.police{
-    margin: 0 0 0 350px;
+    color: wheat;
 }
