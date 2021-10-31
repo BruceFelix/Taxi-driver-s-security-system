@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 nav{
@@ -46,4 +46,83 @@ li a{
 .nav-bar a:hover{
     text-shadow: 1px 1px 2px black, 0 0 25px #04044A, 0 0 5px #04044A;
     color: wheat;
+}
+main{
+    margin: 30px auto;
+    width: 1000px;
+}
+form{
+    padding: 50px 10px;
+    background-color: #04044A;
+    min-height: 70vh;
+    border-radius: 50px;
+}
+input{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-stretch: inherit;
+    font-size: 14px;
+    line-height: inherit;
+    font-family: lato, sans-serif;
+    margin: 10px 0;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    /* border: none; */
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+}
+label{
+    color: rgb(141, 140, 139);
+    font-size: 20px;
+}
+.center-buttons{
+    text-align: center;
+}
+.bad{
+        color: rgb(255, 255, 255);
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-size: 13px;
+        line-height: inherit;
+        font-family: lato, sans-serif;
+        text-transform: uppercase;
+        appearance: button;
+        cursor: pointer;
+        width: 30%;
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: rgba(255, 0, 0, 0.822);
+        display: inline-block;
+        border: none;
+}
+.bad:hover{
+    color: #000000;
+    box-shadow: 4px 2px 8px #a83232;  
+    background-color: white;  
+} 
+.good:hover{
+    color: #000000;
+    box-shadow: 4px 2px 8px #35a35f;
+    background-color: white;  
+}
+.good{
+    color: rgb(255, 255, 255);
+    font-weight: inherit;
+    font-stretch: inherit;
+    font-size: 13px;
+    line-height: inherit;
+    font-family: lato, sans-serif;
+    text-transform: uppercase;
+    appearance: button;
+    cursor: pointer;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgba(0, 255, 76, 0.822);
+    display: inline-block;
+    border: none;
 }
