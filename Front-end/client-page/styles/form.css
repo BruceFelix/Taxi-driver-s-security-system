@@ -38,6 +38,8 @@ li{
 li a{
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+
 }
 .nav-bar{
     position: absolute;
