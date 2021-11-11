@@ -12,6 +12,15 @@ nav{
     height: 50px;
     width: 100%;
 }
+@media screen and (max-width: 360px) {
+    header{
+        width: 100%;
+    }
+    nav{
+        float: right;
+    }
+    
+}
 .icon{
     justify-content: flex-start;
     align-self: flex-start;

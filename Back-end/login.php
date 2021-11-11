@@ -38,7 +38,7 @@ else{
                 
                 //if its the admin loggin in, take him to dispatcher page
                 if($username == "admin"){
-                    header("location:../Frond-end/Dispatcher/dispatcher.html");
+                    header("location:../Front-end/Dispatcher/dispatcher.html");
                 }
                 else{
                     header("location:../Front-end/client-page/client.html");
@@ -60,14 +60,14 @@ else{
             $endOfAttempts = "<div style = 'color:red'> <strong>You can only make 3 attempts at a login. <br> Please contact your website admin. </strong></div>";
             // sleep(5);
             // header("location:../front-end/login.html");
-            header("location:../Front-end/client-page/loginNew.php");
+            header("location: loginNew.php");
         }    
     }
     else{
         $_SESSION['errorNumber'] = 3;
         $noUser = "<h1> style = 'color':red;'> User nor registered</h1> <br>";
         echo $_SESSION['attempts'];
-        header("location:../Front-end/client-page/loginNew.php");
+        header("location: loginNew.php");
     }
 }
 }
