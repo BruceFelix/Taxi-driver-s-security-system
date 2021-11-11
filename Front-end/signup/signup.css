@@ -15,7 +15,7 @@ body{
     background-color: rgb(238, 237, 237);
     width: 50%;
     float: left;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 .logo img{
     width: 200px;
@@ -40,27 +40,30 @@ body{
 .sign-up{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    flex-basis: 20px;
     float: right;
     width: 50%;
     background-color: #04044A;
-    border-radius: 300px 100px 300px 100px; 
+    border-radius: 200px 100px 200px 100px; 
     height: 100vh;
 }
 .sign-up form{
-    padding: 50px 10px 40px 100px;
+    padding: 0px 10px 40px 100px;
+    min-height: fit-content;
 }
 .sign-up div{
     padding: 20px;
-    margin: 20px;
+    margin: 10px;
 }
 input{
     color: #000000;
     font-weight: bold;
     font-stretch: inherit;
-    font-size: 14px;
+    font-size: 13px;
     line-height: inherit;
     font-family: lato, sans-serif;
-    margin-top: 1;
+    margin-top: 1px;
     box-sizing: border-box;
     position: relative;
     display: block;
@@ -69,7 +72,7 @@ input{
     border: none;
     border-bottom: rgb(36, 34, 34) 1px solid;
     padding: 5px;
-    border-radius: 2px;
+    border-radius: 4px;
     outline: none;
 }
 label{
@@ -92,6 +95,9 @@ input[type=submit]{
         border-radius: 24px;
         background-color: rgba(255, 0, 0, 0.822);
         display: inline-block;
+}
+input[type=file]{
+    background-color: white     ;
 }
 .sign-up a {
     float: right;
@@ -142,5 +148,19 @@ input[type=submit]{
         color: rgb(36, 34, 34);
         margin: 5px;
         font-size: 12px;
+    }
+}
+@media screen and (max-width:360px) {
+    .sign-up{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: #04044A;
+        border-radius: 0;
+    }
+    .sign-up form{
+        min-height: fit-content;
+        padding: 5px;
     }
 }
