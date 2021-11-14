@@ -14,7 +14,7 @@ body{
     background-color: rgb(238, 237, 237);
     width: 50%;
     float: left;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 .logo img{
     width: 200px;
@@ -43,7 +43,7 @@ body{
     width: 50%;
     background-color: #04044A;
     height: 100vh;
-    border-radius: 300px 100px 300px 100px;
+    /* border-radius: 300px 100px 300px 100px; */
 }
 .sign-up form{
     padding: 50px;
@@ -107,31 +107,51 @@ input[type=submit]{
    background-color: red;
 }
 @media screen and (max-width: 800px) {
-    /* main{
-        width: 100%;
-    } */
     .company-div{
         width: 100%;
+        height: auto;
+
+    }
+    .image-capture {
+        top: 1000px;
+        position: relative;
+        display: none;
     }
     .sign-up{
+
+        display: flex;
+        flex-direction: column;
         width: 100%;
+        background-color: #04044A;
+        border-radius: 0;
+        height: 500px;
+      }
+      form{
+          padding: 0;
+          margin: 0;
+      }
+      .footer{
+          display: flex;
+          flex-direction: row;
+      }
+    .sign-up form{
+        padding: 20px;
     }
     img {
         max-width: 100%;
         height: auto;
+        /* display: none; */
       }
     input[type=submit]{
         width: 45%;
         font-size: 12px;
         padding: 8px;
-        float: left;
     }
     #submission:hover{
         background-color: red;
         color: aliceblue;
      }
      .sign-up a {
-        float: left;
         width: 50%;
         padding: 0 1px 5px 20px;
         display: inline-block;
