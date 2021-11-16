@@ -1,28 +1,22 @@
-*{
+ *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+a{
     color: white;
 }
-
 nav{
     display: flex;
     flex-direction: row;
     background-color: #FF8C00;
     height: 50px;
-    width: 100%;
-}
-.icon{
-    justify-content: flex-start;
-    align-self: flex-start;
-    width: 150px;
-    height: 100px;
-    padding: 0px 200px 0px 0px;
-
+    max-width: 100%;
+    justify-content: space-between;
 }
 .icon img {
     height: 50px;
-    width: 200px;
+    max-width: 200px;
     padding: 0 0 0 20px;
     margin: 0;
 }
@@ -34,73 +28,39 @@ li{
     padding: 5px 10px;
     display: inline-block;
     text-decoration: none;
+    color: white;
 }
 li a{
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.nav-bar{
-    position: absolute;
-    left: 500px;
-}
+
+
 .nav-bar a:hover{
     text-shadow: 1px 1px 2px black, 0 0 25px #04044A, 0 0 5px #04044A;
     color: wheat;
 }
+@media screen and (max-width: 400px) {
+    .menuicon{
+        right: 10px;
+    }
+    .icon img {
+        height: 40px;
+        width: 150px;
+        padding: 0 0 0 10px;
+        margin: 0;
+    }
+    .nav-bar{
+        display: none;
+    }
+    nav{
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+    }
+}
 .landing{
-    /* width: 50%; */
-    height: 90vh;
+    min-height: 90vh;
     background-image:url("../../images/images/Vector.png");
     background-repeat: no-repeat;
-}
-.landing p{
-    position: absolute;
-    max-width: fit-content;
-    top: 200px;
-    padding: 20px;
-    width: 50%;
-    line-height: 2rem;
-}
-.landing img{
-    position: absolute;
-    top: 400px;
-    left: 200px;
-}
-
-.car img{
-    position: absolute;
-    top: 300px;
-    right: 50px;
-} 
-#testimony{
-    background: #04044A;
-    padding: 20px;
-    margin: 30px auto;
-    width: 1144px;
-    height: 300px;
-    border-top-left-radius: 158px;
-    border-bottom-right-radius: 158px;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9);
-}
-#testimony img{
-    float: left;
-    height: 200px;
-    width: 150px;
-    margin: 40px;    
-}
-#testimony p{
-    margin: 60px;
-    line-height: 3rem;
-}
-.two p{
-    float: left;
-    width: 600px;
-}
-.two img{
-    float: right;
-    width: 200px;
-    height: 180px;
-    margin: 20px 50px 20px 20px;
 }
