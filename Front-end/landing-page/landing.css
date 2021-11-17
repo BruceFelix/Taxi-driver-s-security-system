@@ -6,6 +6,11 @@
 a{
     color: white;
 }
+.topNav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 nav{
     display: flex;
     flex-direction: row;
@@ -20,29 +25,34 @@ nav{
     padding: 0 0 0 20px;
     margin: 0;
 }
-ul{
-    list-style: none;
-    padding: 10px;
-}
-li{
-    padding: 5px 10px;
+a{
+    padding: 15px 15px;
     display: inline-block;
     text-decoration: none;
     color: white;
-}
-li a{
     text-decoration: none;
+    width: max-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.nav-bar{
+    width: max-content;
+    display: flex;
+}
 
 .nav-bar a:hover{
     text-shadow: 1px 1px 2px black, 0 0 25px #04044A, 0 0 5px #04044A;
     color: wheat;
 }
+@media screen  and (min-width: 400px){
+    .menu-icon{
+        display: none;
+    }
+
+}
 @media screen and (max-width: 400px) {
-    .menuicon{
-        right: 10px;
+    nav{
+        height: auto;
+        display: block;
     }
     .icon img {
         height: 40px;
@@ -51,16 +61,87 @@ li a{
         margin: 0;
     }
     .nav-bar{
-        display: none;
+        height: auto;
+        background-color: #FF8C00;
+        color: white;
+        flex-direction: column;
     }
-    nav{
-        overflow: hidden;
-        display: flex;
-        justify-content: space-between;
+
+    .menu-icon{
+        width: 110px;
+        padding: 5px 5px;
     }
+}
+.home{
+    display: flex;
+    flex-wrap: wrap;
 }
 .landing{
     min-height: 90vh;
     background-image:url("../../images/images/Vector.png");
     background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 800px;
+}
+.landing h3{
+    margin: 100px 0 20px 100px;
+    font-size: x-large;
+    font-weight: bolder;
+    border-bottom: 1px solid #FF8C00;
+    width: max-content;    
+}
+.landing p{
+    max-width: 1000px;
+    margin: 15px;
+    padding-right: 100px ;
+    line-height: 2em;
+    font-size: 20px;
+}
+#driver{
+    width: max-content;
+    padding-left: 100px;    
+}
+.car{
+    margin-top: 200px;
+}
+@media screen and (max-width: 360px) {
+    .car{
+        display: none;
+    }
+    .landing p{
+        padding: 10px 10px;
+    }
+    #driver{
+        margin-left: 10px;
+        padding: 10px 50px;
+    }
+    .landing h3{
+        margin: 10px 10px 0 90px ;
+    }
+}
+#testimony{
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#testimony p{
+    color: rgb(0, 0, 0);
+}
+.testimonies{
+    background: #fbfbfd;
+    margin:10px 10px ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #ff8c00;
+    border-radius: 10px;
+    box-shadow: 6px 3px 13px 4px rgb(242, 242, 242);
+    width: 250px;
+}
+.testimonies img{
+padding: 10px;
 }
