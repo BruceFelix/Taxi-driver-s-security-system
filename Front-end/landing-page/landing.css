@@ -47,6 +47,7 @@ a{
     .menu-icon{
         display: none;
     }
+
 }
 @media screen and (max-width: 400px) {
     nav{
@@ -60,7 +61,6 @@ a{
         margin: 0;
     }
     .nav-bar{
-        display: none;
         height: auto;
         background-color: #FF8C00;
         color: white;
@@ -75,7 +75,6 @@ a{
 .home{
     display: flex;
     flex-wrap: wrap;
-    width: 780px;
 }
 .landing{
     min-height: 90vh;
@@ -104,4 +103,45 @@ a{
 #driver{
     width: max-content;
     padding-left: 100px;    
+}
+.car{
+    margin-top: 200px;
+}
+@media screen and (max-width: 360px) {
+    .car{
+        display: none;
+    }
+    .landing p{
+        padding: 10px 10px;
+    }
+    #driver{
+        margin-left: 10px;
+        padding: 10px 50px;
+    }
+    .landing h3{
+        margin: 10px 10px 0 90px ;
+    }
+}
+#testimony{
+    display: flex;
+    margin: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#testimony p{
+    color: rgb(0, 0, 0);
+}
+.testimonies{
+    background: #fbfbfd;
+    margin:10px 10px ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #ff8c00;
+    border-radius: 10px;
+    box-shadow: 6px 3px 13px 4px rgb(242, 242, 242);
+    width: 250px;
+}
+.testimonies img{
+padding: 10px;
 }
