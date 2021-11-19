@@ -11,27 +11,34 @@
 <body>
     <header>
         <nav>
-            <div class="icon">
-                <img src="../../images/logos/company-logo.png" alt="company logo">
+            <div class="topNav">
+                <div class="icon">
+                    <img src="../../images/logos/company-logo.png" alt="company logo">
+                </div>
+                <a href="javascript:void(0);" class="icon menu-icon" onclick="myFunction()"><img src="../../images/images/bars-solid.svg" alt=""></a>
             </div>
             <div class="nav-bar">
-                <ul>
-                    <li><a href="#">Message</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="../login-page/login.html">Logout</a></li>
-                </ul>
+                <a href="dipatcherprofile.html">Profile</a>
+                <a href="../login-page/login.html">Logout</a>
             </div>
         </nav>
     </header>
     <main>
-        <div class="my-divs passenger">
-           <p><a href="#">Call the police</a> </p>
+        <div>
+            <a class="police" href="#">
+                <div class="my-divs passenger">
+                   <p>Call the police</p>
+                </div>
+            </a>
         </div>
-        <div class="my-divs dispatcher">
-           <p><a href="drivers.html
-            ">View Drivers</a></p>
+        <div>
+            <a class="driver" href="drivers.html">
+            <div class="my-divs dispatcher">
+                <p>View Drivers</p>
+            </div>
+        </a>
         </div>
     </main>
-    
+    <script src="../landing-page/menubar.js"></script>
 </body>
 </html>
