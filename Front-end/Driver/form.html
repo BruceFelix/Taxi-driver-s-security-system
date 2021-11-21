@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../client-page/styles/form.css">
+    <link rel="stylesheet" href="../Driver/styles/form.css">
     <link rel="shortcut icon" href="../../images/logos/logo.PNG" type="image/x-icon">
     <title>Driver's Form</title>
 </head>
@@ -15,12 +15,7 @@
                 <img src="../../images/logos/company-logo.png" alt="company logo">
             </div>
             <div class="nav-bar">
-                <ul>
-                    <li><a href="#">Call Police</a></li>
-                    <li><a href="#">Call dispatcher</a></li>
-                    <li><a href="#">Messages</a></li>
-                    <li><a href="../../Front-end/client-page/client.html">Go Back</a></li>
-                </ul>
+                <a href="../../Front-end/Driver/driver.html">Go Back</a>
             </div>
         </nav>
     </header>
@@ -39,16 +34,18 @@
                 <label for="point"> Pickup point</label>
                 <input type="text" name="point" id="name" required><br>
             </div>            
-            <div>
-                <label for="destination">Destination</label>
-                <input type="text" id="destination" name="destination" required><br>
+            <div class="dest">
+                <div>
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" name="destination" required>
+                </div>
+                <input type="submit" value="Edit Destination" class="bad edit"> 
             </div>
             <div class="center-buttons">
                 <input type="submit" value="Cancel" class="bad">
                 <input type="Submit" class="good">
             </div>
             <div class="center-buttons">
-                <input type="submit" value="Change Destination" class="bad"> 
                 <input type="submit" value="Arrived" class="good">
             </div>
         </form>
