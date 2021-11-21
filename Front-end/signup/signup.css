@@ -8,14 +8,17 @@ body{
     background-color: rgb(238, 237, 237);
 
 }
+main{
+   display: flex; 
+   flex-wrap: wrap;
+   width: 100%;
+}
 .company-div{
     text-align: center;
     display: flex;
     flex-direction: column;
     background-color: rgb(238, 237, 237);
     width: 50%;
-    float: left;
-    /* min-height: 100vh; */
 }
 .logo img{
     width: 200px;
@@ -41,16 +44,15 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-basis: 20px;
-    float: right;
     width: 50%;
     background-color: #04044A;
-    /* border-radius: 200px 100px 200px 100px;  */
+    /* margin: 1px; */
     height: 100vh;
 }
 .sign-up form{
-    padding: 0px 10px 40px 100px;
+    padding: 10px;
     min-height: fit-content;
+
 }
 .sign-up div{
     padding: 20px;
@@ -76,7 +78,7 @@ input{
     outline: none;
 }
 label{
-    color: #FF8C00;
+    color: white;
 }
 input[type=submit]{
         color: rgb(255, 255, 255);
@@ -98,6 +100,9 @@ input[type=submit]{
 }
 input[type=file]{
     background-color: white     ;
+}
+input:focus{
+    outline: 1px solid black;
 }
 .sign-up a {
     float: right;
@@ -175,4 +180,41 @@ input[type=file]{
         min-height: fit-content;
         padding: 5px;
     }
+}
+.sign-ups{
+    margin: 100px auto;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.sign-ups h3{
+    font-size: xx-large;
+    font-family: Playfair;
+    border-bottom: 4px solid #04044A;
+    color: #04044A;
+}.my-divs{
+    background-color: #04044A;
+    border-radius: 30px;
+    box-shadow: 2px 4px 10px #04044A;
+    margin: 20px;
+}
+.police, .drivers{
+    padding: 70px;
+}
+.my-divs:hover{
+    box-shadow: 10px 5px 20px #020229;
+}
+.my-divs p{
+    text-decoration: none;
+    font-size: xx-large;
+    padding: 10px;
+}
+.dispatcher p{
+    text-decoration: none;
+    font-size: xx-large;
+}
+.my-divs a:hover{
+    text-shadow: 1px 1px 2px black, 0 0 25px #04044A, 0 0 5px #04044A;
+    color: rgb(238, 122, 14);
 }

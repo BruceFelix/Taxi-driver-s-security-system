@@ -73,7 +73,8 @@ input{
     outline: none;
 }
 label{
-    color: #FF8C00;
+    color: white;
+    font-size: 20px;
 }
 input[type=submit]{
         color: rgb(255, 255, 255);

@@ -9,6 +9,7 @@ nav{
     display: flex;
     flex-direction: row;
     background-color: #FF8C00;
+    justify-content: space-between;
     height: 50px;
     width: 100%;
 }
@@ -26,32 +27,29 @@ nav{
     padding: 0 0 0 20px;
     margin: 0;
 }
-ul{
-    list-style: none;
-    padding: 10px;
-}
-li{
+a{
     padding: 5px 10px;
     display: inline-block;
-    text-decoration: none;
-}
-li a{
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 
 }
 .nav-bar{
-    position: absolute;
-    left: 500px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 20px;
 }
 .nav-bar a:hover{
     text-shadow: 1px 1px 2px black, 0 0 25px #04044A, 0 0 5px #04044A;
     color: wheat;
 }
 main{
-    margin: 30px auto;
-    width: 1000px;
+    margin: 30px 200px;
+}
+h1{
+    text-align: center;
+    color: #04044A;
 }
 form{
     padding: 50px 10px;
@@ -64,19 +62,26 @@ input{
     font-weight: bold;
     font-stretch: inherit;
     font-size: 14px;
-    line-height: inherit;
     font-family: lato, sans-serif;
     margin: 10px 0;
-    box-sizing: border-box;
-    position: relative;
     width: 100%;
-    /* border: none; */
+    border: none;
     padding: 5px;
     border-radius: 10px;
-    outline: none;
 }
+input:focus{
+    outline: 1px solid #FF8C00;
+}
+.dest{
+    display: flex;
+    /* justify-content: space-around; */
+}
+.dest :nth-child(1){
+    flex-grow: 2;
+}
+
 label{
-    color: rgb(141, 140, 139);
+    color: rgb(255, 255, 255);
     font-size: 20px;
 }
 .center-buttons{
@@ -101,14 +106,31 @@ label{
         border: none;
 }
 .bad:hover{
-    color: #000000;
-    box-shadow: 4px 2px 8px #a83232;  
-    background-color: white;  
+    color: #f2f1f1;
+    box-shadow: 4px 2px 8px #ff0606;  
+    /* background-color: white;   */
 } 
+.edit{
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-family: lato, sans-serif;
+    text-transform: uppercase;
+    appearance: button;
+    cursor: pointer;
+    width: 30%;
+    padding: 0px;
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.822);
+    display: inline-block;
+    border: none;
+    margin:  0 5px;
+    height: 30px;
+    margin-top: 30px;
+}
 .good:hover{
-    color: #000000;
-    box-shadow: 4px 2px 8px #35a35f;
-    background-color: white;  
+    color: #ffffff;
+    box-shadow: 4px 2px 8px #50df09;
+    /* background-color: white;   */
 }
 .good{
     color: rgb(255, 255, 255);
@@ -127,4 +149,17 @@ label{
     background-color: rgba(0, 255, 76, 0.822);
     display: inline-block;
     border: none;
+}
+@media screen and (max-width: 400px) {
+    main{
+        width: 100%;
+        margin: 0 ;
+    }    
+    form{
+        border-radius: 0;
+    }
+    .edit{
+        font-size: 10px;
+        padding: 5px;
+    }
 }

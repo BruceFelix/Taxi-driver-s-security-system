@@ -15,6 +15,7 @@ nav{
     background-color: #FF8C00;
     height: 50px;
     min-width: 100%;
+    justify-content: space-between;
 }
 .icon{
     justify-content: flex-start;
@@ -30,22 +31,14 @@ nav{
     padding: 0 0 0 20px;
     margin: 0;
 }
-ul{
-    list-style: none;
-    padding: 10px;
-}
-li{
+a{
     padding: 5px 10px;
     display: inline-block;
-    text-decoration: none;
-}
-li a{
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .nav-bar{
-    position: absolute;
-    right: 40px;
+    margin: 10px 20px;
 }
 .nav-bar a:hover{
     text-shadow: 1px 1px 2px #04044A, 0 0 25px #04044A, 0 0 5px #04044A;
@@ -83,12 +76,10 @@ form{
     display: flex;
     flex-direction: column;
     padding: 50px ;
-    height: 600px;
-    max-width: 1000px;
     background-color: linear-gradient(to bottom, white, rgba(243, 243, 241, 0.316));
 }
 legend{
-    padding-left: 170px;
+    padding-left: 160px;
     width: 60%;
     border-bottom: 1px solid #04044A;
     margin: 20px 0;
@@ -145,7 +136,7 @@ input[type=submit]{
         border-radius: 24px;
         background-color: #04044A;
         justify-content: center;
-        margin-left: 170px;
+        margin-left: 160px;
 }
 input[type=file]{
     border:none;
@@ -176,4 +167,29 @@ input[type=file]{
 }
 .holder::placeholder{
     text-transform: uppercase;
+}
+@media screen and (max-width: 400px) {
+    main{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+    }
+    a{
+        display: inline-block;
+        margin: 2px;
+        padding: 2px;
+    }
+    .img img{
+        width: 170px;
+        height:150px;
+    }
+    .img{
+        padding: 10px;
+        margin: 20px 75px;
+    }
+    .profile{
+        display: flex;
+        flex-direction: column;
+    }
 }
