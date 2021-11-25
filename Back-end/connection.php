@@ -20,18 +20,18 @@ $createdb = "CREATE DATABASE Taxi_drivers_security_system";
 //     echo "<h3 style='color:red'>DB not created</h3>".mysqli_error($connection);
 
 // }
-$tableCreator = "CREATE TABLE usersdetails (id int auto_increment, fname varchar(30),lname varchar(30), primary key(id),profile_picture varchar(30),phonenumber int(50), password varchar(253))";
-if(mysqli_query($connection, $tableCreator)){
-    echo "Table created successfully";
-}
-else{
-    echo "Table not created".mysqli_error($connection);
-}
-$dispatchertable = "CREATE TABLE taxis (id int auto_increment, plates varchar(30), primary key(id), model varchar(30), car_pic varchar(253))";
-if(mysqli_query($connection, $dispatchertable)){
-    echo "Table created";
-}
-else{
-    echo "Not created".mysqli_error($connection);
-}
+// $tableCreator = "CREATE TABLE usersdetails (id int auto_increment, fname varchar(30),lname varchar(30), primary key(id),profile_picture varchar(30),phonenumber int(50), password varchar(253))";
+// if(mysqli_query($connection, $tableCreator)){
+//     echo "Table created successfully";
+// }
+// else{
+//     echo "Table not created".mysqli_error($connection);
+// }
+// $dispatchertable = "CREATE TABLE taxis (id int auto_increment, plates varchar(30), primary key(id), model varchar(30), car_pic varchar(253))";
+// if(mysqli_query($connection, $dispatchertable)){
+//     echo "Table created";
+// }
+// else{
+//     echo "Not created".mysqli_error($connection);
+// }
 ?>

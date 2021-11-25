@@ -24,36 +24,29 @@
         <div class="sign-up">
             <form action="../../Back-end/signup.php" method="post">
                 <div>
-                    <label for="fname" id="fname">First Name</label>
-                    <input type="text" name="fname" required>
-                </div>
-                <div>
-                    <label for="lname" id="lname">Last Name</label>
-                    <input type="text" name="lname" required>
-                </div>
-                <div>
-                    <label for="profile-pic" id="ppic">Profile Picture</label>
-                    <input type="file"   name="profile-pic">
+                    <label for="names" id="fname">Full Name</label>
+                    <input type="text" name="names" required>
                 </div>
                 <div>
                     <label for="number" id="number">Phone Number</label>
                     <input type="tel" name="number"  required>
                 </div>
                 <div>
-                    <label for="password" id="password">Password</label>
-                    <input type="password" name ="password" required> 
+                    <label for="password" >Password</label>
+                    <input type="password" id="password" name ="password" required> 
                 </div>
                 <div>
-                    <label for="passconfirm" id="passcode">Repeat Password</label>
-                    <input type="password" name="passconfirm" required>
+                    <label for="passconfirm" >Repeat Password</label>
+                    <input type="password" id="passcode"name="passconfirm" required>
                 </div>
                 <div class="footer" >
-                    <input type="submit" id="submission" value="SIGN-UP NOW">
+                    <input type="submit" onclick="matchPassword()" id="submission" value="SIGN-UP NOW">
                     <a id ="thelink" href="../login-page/login.html">I already have an account</a>
                 </div>
             </form>
         </div>
     </main>
-    
+
+    <script src="../signup/verifier.js"></script>
 </body>
 </html>
