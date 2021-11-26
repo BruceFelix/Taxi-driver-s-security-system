@@ -8,9 +8,8 @@ if($connection = mysqli_connect($host,$user,$password,$database)){
 }
 else{
     echo"<h3 style='color:red'>Could not connect successfully</h3>" .mysqli_error($connection);
-}
-
-$createdb = "CREATE DATABASE Taxi_drivers_security_system";
+}   
+// $createdb = "CREATE DATABASE Taxi_drivers_security_system";
 // // sql statements
 // if(mysqli_query($connection,$createdb)){
 //     echo "<h3 style='color:green'>DB created successfully</h3>";
