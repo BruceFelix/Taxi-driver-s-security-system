@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+}
+body{
+    background-color: rgb(238, 237, 237);
+}
+.company-div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 237, 237);
+    width: 50%;
+    float: left;
+    /* min-height: 100vh; */
+}
+.logo img{
+    width: 200px;
+    height: 100px;
+}
+.company-div h3{
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 62px;
+    letter-spacing: 0.01em;
+    color: rgb(36, 34, 34);
+}
+.image-capture{
+    width: 100%;
+}
+.image-capture img{
+    width: 600px;
+    height: 337px;
+}
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 50%;
+    background-color: #04044A;
+    height: 100vh;
+    /* border-radius: 300px 100px 300px 100px; */
+}
+.sign-up form{
+    padding: 50px;
+    margin-top: 100px;
+}
+.sign-up div{
+    padding: 20px;
+    margin: 20px;
+}
+input{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-stretch: inherit;
+    font-size: 14px;
+    line-height: inherit;
+    font-family: lato, sans-serif;
+    margin-top: 1;
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    float: right;
+    width: 100%;
+    border: none;
+    border-bottom: rgb(36, 34, 34) 1px solid;
+    padding: 5px;
+    border-radius: 20px;
+    outline: none;
+}
+label{
+    color: white;
+    font-size: 20px;
+}
+input[type=submit]{
+        color: rgb(255, 255, 255);
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-size: 13px;
+        line-height: inherit;
+        font-family: lato, sans-serif;
+        text-transform: uppercase;
+        appearance: button;
+        cursor: pointer;
+        float: left;
+        width: 30%;
+        box-sizing: border-box;
+        padding: 13px 25px;
+        border-radius: 24px;
+        background-color: rgba(255, 0, 0, 0.822);
+        display: inline-block;
+}
+.sign-up a {
+    float: right;
+    width: 60%;
+    padding: 4px 1px 5px 0;
+    display: inline-block;
+    text-decoration: none;
+    color: #FF8C00;
+    margin: 5px;
+    font-size: 18px;
+}
+#submission:hover{
+   background-color: red;
+}
+@media screen and (max-width: 800px) {
+    .company-div{
+        width: 100%;
+        height: auto;
+
+    }
+    .image-capture {
+        top: 1000px;
+        position: relative;
+        display: none;
+    }
+    .sign-up{
+
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #04044A;
+        border-radius: 0;
+        height: 500px;
+      }
+      form{
+          padding: 0;
+          margin: 0;
+      }
+      .footer{
+          display: flex;
+          flex-direction: row;
+      }
+    .sign-up form{
+        padding: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        /* display: none; */
+      }
+    input[type=submit]{
+        width: 45%;
+        font-size: 12px;
+        padding: 8px;
+    }
+    #submission:hover{
+        background-color: red;
+        color: aliceblue;
+     }
+     .sign-up a {
+        width: 50%;
+        padding: 0 1px 5px 20px;
+        display: inline-block;
+        text-decoration: none;
+        color: #FF8C00;
+        margin: 5px;
+        font-size: 16px;
+    }
+    .sign-up a:hover{
+        color: #f8a034;
+        text-shadow: 1px 1px 1px #2f2fe6;
+    }
+}

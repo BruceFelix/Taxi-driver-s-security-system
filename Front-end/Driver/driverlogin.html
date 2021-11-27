@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/logos/logo.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="styles/login.css">
+    <title>Driver Login</title>
+</head>
+<body>
+    <main>
+        <div class="company-div">
+            <div class="logo">
+                <img src="../../images/logos/company-logo.PNG" alt="">
+            </div>
+            <div>
+                <h3>Welcome</h3>
+                
+            </div>
+            <div class="image-capture">
+                <img src="../../images/images/taxi.png" alt="taxi image">
+            </div>
+        </div>
+        <div class="sign-up">
+            <form action="../../Back-end/driver/driverlogin.php" method="POST">
+                <div>
+                    <label for="mail">Email</label>
+                    <input type="mail" name="mail">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" required> 
+                </div>
+                <div class="footer">
+                    <input type="submit" id="submission" value="SIGN-IN">
+                    <a href="../signup/driver-signup.html">Create an account</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>
