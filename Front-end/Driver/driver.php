@@ -1,3 +1,6 @@
+<?php
+ require '../../Back-end/connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../images/logos/logo.PNG" type="image/x-icon">
-    <link rel="stylesheet" href="../Driver/styles/driver.css" >
+    <link rel="stylesheet" href="styles/driver.css" >
     <title>Driver's page</title>
 </head>
 <body>
@@ -15,13 +18,13 @@
                 <img src="../../images/logos/company-logo.png" alt="company logo">
             </div>
             <div class="nav-bar">
-                <a href="../../Front-end/Driver/profile.html">Profile</a>
-                <a href="../../Front-end/landing-page/landing.html">Logout</a>
+                <a href="profile.html"><?php echo $_SESSION['username'] ?></a>
+                <a href="../landing-page/landing.html">Logout</a>
             </div>
         </nav>
     </header>
     <main>
-        <a href="/Front-end/Driver/form.html">
+        <a href="form.html">
             <div class="my-divs passenger">
                 <p>New Passenger</p>
             </div>

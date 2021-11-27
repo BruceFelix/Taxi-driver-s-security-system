@@ -1,3 +1,6 @@
+<?php
+ require '../../Back-end/connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../images/logos/logo.PNG" type="image/x-icon">
-    <link rel="stylesheet" href="../Dispatcher/styles/dispatcher.css" >
+    <link rel="stylesheet" href="styles/dispatcher.css" >
     <title>Dispatcher page</title>
 </head>
 <body>
@@ -15,8 +18,8 @@
                 <img src="../../images/logos/company-logo.png" alt="company logo">
             </div>
             <div class="nav-bar">
-                <a href="dipatcherprofile.html">Profile</a>
-                <a href="../login-page/login.html">Logout</a>
+                <a href="dipatcherprofile.html"><?php echo $_SESSION['username'] ?></a>
+                <a href="login.html">Logout</a>
             </div>
         </nav>
     </header>

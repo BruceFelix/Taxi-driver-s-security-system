@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../images/logos/logo.PNG" type="image/x-icon">
-    <link rel="stylesheet" href="../signup/signup.css">
+    <link rel="stylesheet" href="signup.css">
     <title>Drivers Sign up page</title> 
 </head>
 <body>
@@ -22,10 +22,14 @@
             </div>
         </div>
         <div class="sign-up">
-            <form onsubmit ="return verifyPassword()" action="../../Back-end/driversignup.php" method="POST" enctype="multipart/form-data">
+            <form onsubmit ="return verifyPassword()" action="../../Back-end/driver/driversignup.php" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="names" id="fname">Full Name</label>
                     <input type="text" name="names" required>
+                </div>
+                <div>
+                    <label for="mail" id="mail">Email</label>
+                    <input type="mail" name="mail"  required>
                 </div>
                 <div>
                     <label for="profile" id="ppic">Profile Picture</label>
@@ -58,7 +62,7 @@
                 </div>
                 <div class="footer" >
                     <input type="submit" onclick="matchPassword()" id="submission" value="SIGN-UP NOW">
-                    <a id ="thelink" href="../login-page/login.html">I already have an account</a>
+                    <a id ="thelink" href="../Driver/driverlogin.html   ">I already have an account</a>
                 </div>
             </form>
         </div>
