@@ -1,3 +1,6 @@
+<?php
+ require '../../Back-end/connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,8 @@
                 <img src="../../images/logos/company-logo.PNG" alt="">
             </div>
             <div>
-                <h3>Welcome</h3>
+                <h3>Welcome<?php echo $_SESSION['username'] ?></h3>
+                
             </div>
             <div class="image-capture">
                 <img src="../../images/images/taxi.png" alt="taxi image">
