@@ -1,5 +1,6 @@
 <?php
  require '../../Back-end/connection.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +19,18 @@
                 <img src="../../images/logos/company-logo.png" alt="company logo">
             </div>
             <div class="nav-bar">
-                <a href="dipatcherprofile.html"><?php echo $_SESSION['username'] ?></a>
-                <a href="login.html">Logout</a>
+                <?php
+                if(!isset($_SESSION['username'])){
+                    header("location: login.html");
+                }
+                else{
+                      echo "<a>".$_SESSION['username']."</a>";
+                      echo "
+                      <form action='../../back-end/destroy.php' method='post'>
+                         <a> <input type='submit' value='Logout' id='logout'></a>
+                      </form>";
+                    }
+                ?>
             </div>
         </nav>
     </header>

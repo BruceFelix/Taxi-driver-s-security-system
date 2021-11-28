@@ -5,7 +5,7 @@ $password = "D4yl!4D?Oef4ISYC";
 $database = "Taxi_drivers_security_system";
 
 session_start();
-$_SESSION['message'] = '';
+$_SESSION['username'] = '';
 
 if($connection = mysqli_connect($host,$user,$password,$database)){
     // echo "<h3 style='color:green'>Connected successfully</h3>";

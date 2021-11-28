@@ -17,7 +17,7 @@ nav{
     padding: 0 0 0 20px;
     margin: 0;
 }
-a{
+.nav-bar a{
     font-size: 17px;
     display: inline-block;
     text-decoration: none;
@@ -62,4 +62,10 @@ main{
     margin:  100px auto;
     justify-content: center;
     align-items: center;
+}
+.loggin-out{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

@@ -1,6 +1,7 @@
 <?php
 require '../connection.php';
-   
+if(isset($_POST['mail']) && isset($_POST['password'])){
+
 $email = mysqli_escape_string($connection,$_POST['mail']);
 $password = mysqli_escape_string($connection, $_POST['password']);
 
@@ -9,11 +10,30 @@ $selectUser = "SELECT * FROM dispatcher WHERE mail='$email'";
 $received = mysqli_query($connection,$selectUser);
 
 //checking number of rows received
-if($received){
-    header("location: ../../Front-end/Dispatcher/dispatcher.php");
-}
-else{
-    $_SESSION['username'] = $username;
+if(!$received){
     echo "mysqli_error".mysqli_error($connection);
 }
+else{
+    $row =mysqli_num_rows($received);
+    $received = mysqli_fetch_assoc($received);
+    if($row>0)
+    {
+        
+        if(password_verify($password,$received['password']))
+        {
+            echo $received['name'];
+            $_SESSION['username'] = $received['name'];
+            header("location: ../../Front-end/Dispatcher/dispatcher.php");
+
+        }
+        else{
+            header("location:../../Front-end/Dispatcher/login.html");
+        }
+    }
+    else
+    {
+        header("location:../../Front-end/Dispatcher/login.html");
+    }
+}
+}   
 ?>

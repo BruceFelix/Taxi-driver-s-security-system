@@ -10,6 +10,7 @@ $received = mysqli_query($connection,$selectUser);
 
 //checking number of rows received
 if($received){
+    $_SESSION['username'] = "Hello";
     header("location: ../../Front-end/Driver/driver.php");  
 }
 else{
