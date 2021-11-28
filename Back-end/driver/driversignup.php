@@ -17,8 +17,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         if(preg_match("!image!", $_FILES['profile']['type'])){
             //copy image to images/ folder
             if(copy($_FILES['profile']['tmp_name'], $profilePicture)){
-
-                $_SESSION['username'] = $username;
                 if((move_uploaded_file($_FILES['profile']['tmp_name'],'../photos/people/'.$profilePicture)) && (move_uploaded_file($_FILES['car-pic']['tmp_name'],'../photos/cars/'.$car_picture))){
                     $insert_details = "INSERT INTO drivers(name,mail,profile,phone_number,password) VALUES('$username','$email','$profilePicture','$number','$password')";
                     $car_details = "INSERT INTO taxi(plates,model,picture) VALUES('$num_plates','$car_model','$car_picture')";
@@ -29,10 +27,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $receiveNumber = mysqli_query($connection,$getRecords);
                     if(mysqli_num_rows($receiveNumber)>0){
                         echo "<h3 style='color:red'> This user aready exists.</h3>";
+                        header("location: ../../Front-end/signup/driver-signup.html");
                     }
                     else{
                         if((mysqli_query($connection,$insert_details)) && (mysqli_query($connection,$car_details))){
-            
+                            $_SESSION['username='] = $username;
                             echo "<h3 style='color:green'>User added successfully</h3>";
                             header("location:../../Front-end/Driver/driverlogin.html");
                         }

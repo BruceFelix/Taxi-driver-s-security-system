@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         }
     }
     else{
-        $_SESSION['message'] = "The password do not match! ";
+        echo "The password do not match! ";
     }
 }
 
