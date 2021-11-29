@@ -36,14 +36,14 @@
     </header>
     <main>
         <div class="my-divs">
-            <a  href="#">
+            <a href="#">
                 <div class="police">
                    <p>Call the police</p>
                 </div>
             </a>
         </div>
         <div class="my-divs">
-            <a  href="drivers.html">
+            <a  href="drivers.php">
                 <div class="drivers">
                     <p>View Drivers</p>
                 </div>
