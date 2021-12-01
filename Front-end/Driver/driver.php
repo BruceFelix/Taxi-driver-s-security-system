@@ -14,23 +14,22 @@
 <body>
     <header>
         <nav>
-            <div class="icon">y
+            <div class="icon">
                 <img src="../../images/logos/company-logo.png" alt="company logo">
             </div>
             <div class="nav-bar">
-                <!-- <?php
+                <?php
                 if(!isset($_SESSION['username'])){
                     header("location: driverlogin.html");
                 }
                 else{
-                      echo "<p class='sign-up-btn'>Welcome ".$_SESSION['username']. "</p>";
+                      echo '<a href="profile.php">'.$_SESSION['username']. "</a>";
                       echo "
-                      <form action='../../back-end/destroy.php' method='post' class='logout-Form'>
-                          <input type='submit' value='Logout' id='log-out-btn'>
+                      <form action='../../back-end/destroy.php' method='post'>
+                         <a id='logout'> <input type='submit' value='Logout' id='logout'></a>
                       </form>";
                     }
-                ?> -->
-                <a href="../landing-page/landing.html">Logout</a>
+                ?>
             </div>
         </nav>
     </header>

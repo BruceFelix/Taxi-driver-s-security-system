@@ -27,12 +27,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $receiveNumber = mysqli_query($connection,$getRecords);
                     if(mysqli_num_rows($receiveNumber)>0){
                         echo "<h3 style='color:red'> This user aready exists.</h3>";
-                        header("location: ../../Front-end/signup/driver-signup.html");
+                        
+                        // header("location: ../../Front-end/signup/driver-signup.html");   
                     }
                     else{
                         if((mysqli_query($connection,$insert_details)) && (mysqli_query($connection,$car_details))){
-                            $_SESSION['username='] = $username;
-                            echo "<h3 style='color:green'>User added successfully</h3>";
+                            // echo "<h3 style='color:green'>User added successfully</h3>";
                             header("location:../../Front-end/Driver/driverlogin.html");
                         }
                         else{
