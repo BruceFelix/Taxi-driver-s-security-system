@@ -3,7 +3,7 @@ require "../../Back-end/connection.php";
 $selectDetails = "SELECT * FROM dispatcher";
 $result = mysqli_query($connection,$selectDetails);
 if(mysqli_num_rows($result) > 0 ) {
-    $result = mysqli_fetch_assoc($result);
+    $driversresult = mysqli_fetch_assoc($result);
 }    
 ?>
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ if(mysqli_num_rows($result) > 0 ) {
             <div class="nav-bar">
                 <ul>
                     <li><a href="dispatcher.php">Back</a></li>
-                    <li><a href="login.html">Logout</a></li>
+                    <!-- <li><a href="login.html">Logout</a></li> -->
                 </ul>
             </div>
         </nav>
@@ -34,9 +34,9 @@ if(mysqli_num_rows($result) > 0 ) {
         <div class="left">
             <div class="img">
                 <img src="../../images/images/man.png" alt="">
-                <h3><?php echo $result['name'];?></h3>
-                <p><?php echo $result['mail'];?></p>
-                <p>+254<?php echo $result['phone_number'];?></p>
+                <h3><?php echo $driversresult['name'];?></h3>
+                <p><?php echo $driversresult['mail'];?></p>
+                <p>+254<?php echo $driversresult['phone_number'];?></p>
             </div>
         </div>
         <div class="profile">
@@ -44,17 +44,17 @@ if(mysqli_num_rows($result) > 0 ) {
                 <legend> <strong>Profile Settings</strong></legend>
                 <div class="names">
                         <label for="name">Fullname</label><br>
-                        <input type="text" name="name" value="<?php echo $result['name'];?>"> 
+                        <input type="text" name="name" value="<?php echo $driversresult['name'];?>"> 
                 </div>
                 <div class="mail">
                     <label for="mail">Email</label><br>
-                    <input type="email" name="mail" value="<?php echo $result['mail'];?>"> 
+                    <input type="email" name="mail" value="<?php echo $driversresult['mail'];?>"> 
                 </div>
 
                 <div class="other-details">
                     <div>
                         <label for="number">Phone Number</label><br>
-                        <input type="tel" name="number" value="+254<?php echo $result['phone_number'];?>"
+                        <input type="tel" name="number" value="+254<?php echo $driversresult['phone_number'];?>">
                     </div>
                     <div>
                         <label for="password">Password</label>
