@@ -25,7 +25,7 @@
                 else{
                       echo '<a href="profile.php">'.$_SESSION['username']. "</a>";
                       echo "
-                      <form action='../../back-end/destroy.php' method='post'>
+                      <form action='../../back-end/driver/destroy.php' method='post'>
                          <a id='logout'> <input type='submit' value='Logout' id='logout'></a>
                       </form>";
                     }
@@ -42,6 +42,11 @@
         <a href="#">
             <div class="my-divs dispatcher">
                 <p>Contact Dispatcher</p>
+            </div>
+        </a>
+        <a href="passengers.php">
+            <div class="my-divs passenger">
+                <p>View Passengers</p>
             </div>
         </a>
         <a href="">

@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(copy($_FILES['profile']['tmp_name'], $profilePicture)){
                 if((move_uploaded_file($_FILES['profile']['tmp_name'],'../photos/people/'.$profilePicture)) && (move_uploaded_file($_FILES['car-pic']['tmp_name'],'../photos/cars/'.$car_picture))){
                     $insert_details = "INSERT INTO drivers(name,mail,profile,phone_number,password) VALUES('$username','$email','$profilePicture','$number','$password')";
-                    $car_details = "INSERT INTO taxi(plates,model,picture) VALUES('$num_plates','$car_model','$car_picture')";
+                    $car_details = "INSERT INTO taxi(mail,plates,model,picture) VALUES('$email','$num_plates','$car_model','$car_picture')";
     
     
                     //checking if user email already exists

@@ -27,12 +27,12 @@ else{
 
         }
         else{
-            header("location:../../Front-end/Driver/login.html");
+            header("location:../../Front-end/Driver/driverlogin.html");
         }
     }
     else
     {
-        header("location:../../Front-end/Driver/login.html");
+        header("location:../../Front-end/Driver/driverlogin.html");
     }
 }
 }

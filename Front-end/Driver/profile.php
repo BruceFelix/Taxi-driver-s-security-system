@@ -1,13 +1,20 @@
 <?php
 require "../../Back-end/connection.php";
-$selectDetails = "SELECT * FROM drivers";
-$selectTaxi = "SELECT * FROM taxi";
-$result = mysqli_query($connection,$selectDetails);
-$taxiresult = mysqli_query($connection,$selectTaxi);
-if((mysqli_num_rows($result) > 0) && (mysqli_num_rows($taxiresult) > 0)) {
+if(isset($_SESSION['username'])){
+    $mail = $_SESSION['email'];
+    $selectDetails = "SELECT * FROM drivers WHERE mail = '$mail' ";
+    $selectTaxi = "SELECT * FROM taxi where mail = '$mail'";
+    $result = mysqli_query($connection,$selectDetails);
+    $taxiresult = mysqli_query($connection,$selectTaxi);
+    if((mysqli_num_rows($result) > 0) && (mysqli_num_rows($taxiresult) > 0)) {
     $driverresult = mysqli_fetch_assoc($result);
     $carresult = mysqli_fetch_assoc($taxiresult);
 } 
+}
+else{
+    header("location: driverlogin.html");
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,8 +61,8 @@ if((mysqli_num_rows($result) > 0) && (mysqli_num_rows($taxiresult) > 0)) {
                 </div>
                 <div class="other-details">
                     <div>
-                        <label for="tel">Phone Number</label><br>
-                        <input type="tel" name="tel" value="+254<?php echo $driverresult['phone_number'];?>">
+                        <label for="number">Phone Number</label><br>
+                        <input type="tel" name="number" value="+254<?php echo $driverresult['phone_number'];?>">
                     </div>
                     <div>
                         <label for="plates">Number plate</label> <br>
@@ -66,8 +73,8 @@ if((mysqli_num_rows($result) > 0) && (mysqli_num_rows($taxiresult) > 0)) {
                         <input type="text" name="model" value="<?php echo $carresult['model'];?>">
                     </div>
                     <div>
-                        <label for="cpic">Car picture</label> <br>
-                        <input type="file" name="cpic">
+                        <label for="password">Password</label> <br>
+                        <input type="password" name="password">
                     </div>
                 </div>
                 <input type="submit" name='edit' value="Save Profile">

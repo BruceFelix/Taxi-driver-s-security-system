@@ -1,9 +1,12 @@
 <?php
 require "../../Back-end/connection.php";
-$selectDetails = "SELECT * FROM dispatcher";
-$result = mysqli_query($connection,$selectDetails);
-if(mysqli_num_rows($result) > 0 ) {
-    $driversresult = mysqli_fetch_assoc($result);
+if(isset($_SESSION['username'])){
+    $mail = $_SESSION['email'];
+    $selectDetails = "SELECT * FROM dispatcher WHERE mail = '$mail'";
+    $result = mysqli_query($connection,$selectDetails);
+    if(mysqli_num_rows($result) > 0 ) {
+        $driversresult = mysqli_fetch_assoc($result);
+    }
 }    
 ?>
 <!DOCTYPE html>
