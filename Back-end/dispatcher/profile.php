@@ -20,7 +20,9 @@ if(isset($_POST['edit']))
 
         if($sql2){
             // if successful
-            header("location: ../../Front-end/Dispatcher/dispatcher.php");
+            $_SESSION['username'] = $username;
+            $_SESSION['email'] = $email;    
+            header("location: ../../Front-end/Dispatcher/dispatcherprofile.php");
         }
         else{
             // if updates fails

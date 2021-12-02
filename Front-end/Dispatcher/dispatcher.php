@@ -26,7 +26,7 @@
                 else{
                       echo '<a href="dispatcherprofile.php">'.$_SESSION['username'].'</a>';
                       echo "
-                      <form action='../../back-end/destroy.php' method='post'>
+                      <form action='../../back-end/dispatcher/destroy.php' method='post'>
                          <a id='logout'> <input type='submit' value='Logout' id='logout'></a>
                       </form>";
                     }
