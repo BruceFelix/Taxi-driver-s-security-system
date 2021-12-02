@@ -88,7 +88,7 @@ form{
     background-color: linear-gradient(to bottom, white, rgba(243, 243, 241, 0.316));
 }
 legend{
-    padding-left: 160px;
+    padding-left: 100px;
     width: 60%;
     border-bottom: 1px solid #04044A;
     margin: 20px 0;
@@ -154,26 +154,10 @@ input[type=file]{
     margin: 10px 0;
 }
 .names{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 60%;
-}
-.fname{
-    width: 50%;
-    padding-right: 10px;
-}
-.fname input[type=text]{
-    max-width: 1000px;
+
     width: 100%;
 }
-.lname{
-    width: 50%;
-}
-.lname input[type=text]{
-    max-width: 500px;
-    width: 100%;
-}
+
 .holder::placeholder{
     text-transform: uppercase;
 }

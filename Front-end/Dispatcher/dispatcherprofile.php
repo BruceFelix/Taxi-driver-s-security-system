@@ -1,3 +1,11 @@
+<?php
+require "../../Back-end/connection.php";
+$selectDetails = "SELECT * FROM dispatcher";
+$result = mysqli_query($connection,$selectDetails);
+if(mysqli_num_rows($result) > 0 ) {
+    $result = mysqli_fetch_assoc($result);
+}    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,34 +34,34 @@
         <div class="left">
             <div class="img">
                 <img src="../../images/images/man.png" alt="">
-                <h3>John Doe</h3>
-                <p>0792743897</p>
+                <h3><?php echo $result['name'];?></h3>
+                <p><?php echo $result['mail'];?></p>
+                <p>+254<?php echo $result['phone_number'];?></p>
             </div>
         </div>
         <div class="profile">
-            <form action="/" method="post">
+            <form action="../../Back-end/dispatcher/profile.php" method="POST" enctype="multipart/form-data">
                 <legend> <strong>Profile Settings</strong></legend>
                 <div class="names">
-                    <div class="fname">
-                        <label for="fname">Name</label><br>
-                        <input type="text" name="fname" class="holder" placeholder="first name"> 
-                    </div>
-                    <div class="lname">
-                        <label for="lname">Surname </label><br>
-                        <input type="text" name="lname" class="holder" placeholder="Surname"> 
-                    </div>
+                        <label for="name">Fullname</label><br>
+                        <input type="text" name="name" value="<?php echo $result['name'];?>"> 
                 </div>
+                <div class="mail">
+                    <label for="mail">Email</label><br>
+                    <input type="email" name="mail" value="<?php echo $result['mail'];?>"> 
+                </div>
+
                 <div class="other-details">
                     <div>
-                        <label for="tel">Phone Number</label><br>
-                        <input type="tel" name="tel">
+                        <label for="number">Phone Number</label><br>
+                        <input type="tel" name="number" value="+254<?php echo $result['phone_number'];?>"
                     </div>
                     <div>
                         <label for="password">Password</label>
                         <input type="password" name="password">
                     </div>
                 </div>
-                <input type="submit" value="Save Profile">
+                <input type="submit" name="edit" value="Save Profile">
             </form>
         </div>
     </main>

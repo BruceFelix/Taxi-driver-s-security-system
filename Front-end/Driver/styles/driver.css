@@ -28,12 +28,23 @@ nav{
     margin: 0;
 }
 a{
-    padding: 15px 10px;
+    padding: 12px 10px;
     font-size: 17px;
     display: inline-block;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.nav-bar{
+    display: flex;
+    justify-content: center;
+}
+#logout{
+    border: none;
+    color: white;
+    background-color: #FF8C00;
+    justify-self: center    ;
+}
+
 .nav-bar a:hover{
     text-shadow: 1px 1px 2px #04044A, 0 0 25px #04044A, 0 0 5px #04044A;
     color: wheat;

@@ -1,3 +1,6 @@
+<?php
+require "../../Back-end/connection.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,17 +32,11 @@
             </div>
         </div>
         <div class="profile">
-            <form action="/" method="post">
+            <form action="../../Back-end/driver/profile.php" method="POST" enctype="multipart/form-data"> 
                 <legend> <strong>Profile Settings</strong></legend>
                 <div class="names">
-                    <div class="fname">
                         <label for="fname">Name</label><br>
                         <input type="text" name="fname" class="holder" > 
-                    </div>
-                    <div class="lname">
-                        <label for="lname">Surname </label><br>
-                        <input type="text" name="lname" class="holder"> 
-                    </div>
                 </div>
                 <div class="other-details">
                     <div>
@@ -59,7 +56,7 @@
                         <input type="file" name="cpic">
                     </div>
                 </div>
-                <input type="submit" value="Save Profile">
+                <input type="submit" name='edit' value="Save Profile">
             </form>
         </div>
     </main>

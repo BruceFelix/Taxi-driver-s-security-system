@@ -20,8 +20,8 @@ else{
     {
         
         if(password_verify($password,$received['password']))
-        {
-            echo $received['name'];
+        {   
+            $_SESSION['email'] = $received['mail'];
             $_SESSION['username'] = $received['name'];
             header("location: ../../Front-end/Dispatcher/dispatcher.php");
 

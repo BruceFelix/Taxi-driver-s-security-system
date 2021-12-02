@@ -24,10 +24,10 @@
                     header("location: login.html");
                 }
                 else{
-                      echo "<a>".$_SESSION['username']."</a>";
+                      echo '<a href="dispatcherprofile.php">'.$_SESSION['username'].'</a>';
                       echo "
                       <form action='../../back-end/destroy.php' method='post'>
-                         <a> <input type='submit' value='Logout' id='logout'></a>
+                         <a id='logout'> <input type='submit' value='Logout' id='logout'></a>
                       </form>";
                     }
                 ?>
@@ -36,14 +36,14 @@
     </header>
     <main>
         <div class="my-divs">
-            <a  href="#">
+            <a href="#">
                 <div class="police">
                    <p>Call the police</p>
                 </div>
             </a>
         </div>
         <div class="my-divs">
-            <a  href="drivers.html">
+            <a  href="drivers.php">
                 <div class="drivers">
                     <p>View Drivers</p>
                 </div>
