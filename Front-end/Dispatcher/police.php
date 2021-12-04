@@ -1,6 +1,6 @@
 <?php
  require '../../Back-end/connection.php';
-
+$police = mysqli_query($connection, "SELECT * FROM policestations");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../images/logos/logo.PNG" type="image/x-icon">
-    <link rel="stylesheet" href="styles/dispatcher.css" >
-    <title>Dispatcher page</title>
+    <link rel="stylesheet" href="styles/police.css" >
+    <title>Police page</title>
 </head>
 <body>
     <header>
@@ -34,21 +34,39 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="my-divs">
-            <a href="police.php">
-                <div class="police">
-                   <p>Call the police</p>
-                </div>
-            </a>
+    <main class="police">
+        <div class="left">
+        <?php
+        if(mysqli_num_rows($police) > 0 ) {
+        ?>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone number</th>
+                </tr>
+        <?php
+            $i=0;
+            while($row = mysqli_fetch_assoc($police)){
+        ?>
+                <tr>
+                    <td><a href=""><?php echo $row['name'];?></a></td>
+                    <td><?php echo $row['number'];?></td>
+                </tr>
+        <?php
+            $i++;
+            }
+        ?>
+            </table>
+        <?php
+            }
+            else{
+                echo "No results found.".mysqli_error($connection);
+            }
+        ?>
         </div>
-        <div class="my-divs">
-            <a  href="drivers.php">
-                <div class="drivers">
-                    <p>View Drivers</p>
-                </div>
-            </a>
-        </div>
+        <div id="map"></div>
     </main>
+    <script src="maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0TOlBoaCqdBkmXn7YOw7BGP8CNtYE4sM&callback=initMap"></script>
 </body>
-</html>
+</html> 
