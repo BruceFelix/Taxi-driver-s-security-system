@@ -39,7 +39,7 @@
                 <p>New Passenger</p>
             </div>
         </a>
-        <a href="#">
+        <a href="disptachers.php">
             <div class="my-divs dispatcher">
                 <p>Contact Dispatcher</p>
             </div>
@@ -49,7 +49,7 @@
                 <p>View Passengers</p>
             </div>
         </a>
-        <a href="">
+        <a href="policemap.php">
             <div class="my-divs police">
                 <p>Call the Police</p>
             </div>

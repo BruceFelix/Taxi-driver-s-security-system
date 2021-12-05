@@ -47,48 +47,13 @@ a{
 padding: 10px;
 margin: 10px;
 }
-table{
-    border: 1px solid black;
-    width: 100%;
-    border-collapse: collapse;
-
-}
-td,th{
-    color: black;
-    height: 30px;
-    text-align: center;
-    vertical-align: bottom;
-    padding: 10px;
-    border-bottom: 1px solid black;
-    font-weight: 700;
-    /* font-style: obliq; */
-}
-th{
-    background-color: #04044A;
-    color: white;
-    width: 50%;
-}
-tr:nth-child(even) {background-color: #f2f2f2;}
-tr:hover {background-color: #FF8C00;}
-.police{
-    display: flex;
-
-}
-table a{
-    color: #04044A;
-}
-.left{
-    margin-top: 20px;
-    height: 80vh;
-    width: 50%;
-    color: #04044A;
-    align-content: center;
-}
 #map{
     height: 80vh;
-    width: 700px;
-    margin: 20px 10px;
-
+    width: 80%;
+}
+.police{
+    display: flex;
+    justify-content: center;
 }
 
 .loggin-out{
