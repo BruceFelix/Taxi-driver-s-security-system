@@ -1,6 +1,6 @@
 <?php
  require '../../Back-end/connection.php';
-$police = mysqli_query($connection, "SELECT * FROM policestations");
+$dispatcher = mysqli_query($connection, "SELECT * FROM dispatcher");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,9 +9,8 @@ $police = mysqli_query($connection, "SELECT * FROM policestations");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../images/logos/logo.PNG" type="image/x-icon">
-    <link rel="stylesheet" href="styles/police.css" >
-    <script src="maps.js"></script>
-    <title>Police page</title>
+    <link rel="stylesheet" href="styles/dispatchers.css" >
+    <title>Dispatchers page</title>
 
 </head>
 <body>
@@ -39,7 +38,7 @@ $police = mysqli_query($connection, "SELECT * FROM policestations");
     <main class="police">
         <div class="left">
         <?php
-        if(mysqli_num_rows($police) > 0 ) {
+        if(mysqli_num_rows($dispatcher) > 0 ) {
         ?>
             <table>
                 <tr>
@@ -48,11 +47,11 @@ $police = mysqli_query($connection, "SELECT * FROM policestations");
                 </tr>
         <?php
             $i=0;
-            while($row = mysqli_fetch_assoc($police)){
+            while($row = mysqli_fetch_assoc($dispatcher)){
         ?>
                 <tr>
                     <td><a href=""><?php echo $row['name'];?></a></td>
-                    <td><?php echo $row['number'];?></td>
+                    <td><a href="tel:"><?php echo $row['phone_number'];?></a></td>
                 </tr>
         <?php
             $i++;
@@ -66,8 +65,6 @@ $police = mysqli_query($connection, "SELECT * FROM policestations");
             }
         ?>
         </div>
-        <div id="map"></div>
     </main>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7nOf7hBVVd1HvGyKEv-zIZGlNnBvc27Y&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
 </body>
 </html> 

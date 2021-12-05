@@ -78,22 +78,22 @@ table a{
     color: #04044A;
 }
 .left{
-    margin-top: 20px;
+    margin: 20px 100px;
     height: 80vh;
-    width: 50%;
+    width: 70%;
     color: #04044A;
     align-content: center;
 }
-#map{
-    height: 80vh;
-    width: 700px;
-    margin: 20px 10px;
 
-}
 
 .loggin-out{
     font-size: 17px;
     display: inline-block;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media screen and (max-width:400px) {
+    .left{
+        margin: 20px 50px;
+    }
 }
