@@ -1,11 +1,3 @@
-// function getLocation(){
-//     if (navigator.geolocation){
-//         navigator.geolocation.getCurrentPosition(showPosition);
-//     }
-//     else{
-//         alert("Geolocation is not supported by this browser.");
-//     }
-// }
 function initMap(){
     var location = {lat: -1.2841 , lng:  36.8155};
     var map = new google.maps.Map(document.getElementById("map"),{
@@ -71,7 +63,6 @@ function initMap(){
     if(props.content){
         var  infoWindow = new google.maps.InfoWindow({
             content: props.content
-            // '<h3 style="color:#04044A" > Bruce</h3>' 
         });
         marker.addListener('click', function(){
             infoWindow.open(map,marker);
@@ -79,4 +70,46 @@ function initMap(){
     }
 }
 
-} 
+infoWindow = new google.maps.InfoWindow();
+
+const locationButton = document.createElement("button");
+locationButton.textContent = "Pan to Current Location";
+locationButton.classList.add("custom-map-control-button");
+map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+locationButton.addEventListener("click", () => {
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+        infoWindow.setPosition(pos);
+        infoWindow.setContent("Current Location.");
+        infoWindow.open(map);
+        map.setCenter(pos);
+      },
+      () => {
+        handleLocationError(true, infoWindow, map.getCenter());
+      }
+    );
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+});
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(
+      browserHasGeolocation
+        ? "Error: The Geolocation service failed."
+        : "Error: Your browser doesn't support geolocation."
+    );
+    infoWindow.open(map);
+  }  
+}
+
+
+
+ 
