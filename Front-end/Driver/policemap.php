@@ -28,7 +28,7 @@ $police = mysqli_query($connection, "SELECT * FROM policestations");
                 else{
                       echo '<a href="dispatcherprofile.php">'.$_SESSION['username'].'</a>';
                       echo "
-                      <form action='../../back-end/dispatcher/destroy.php' method='post'>
+                      <form action='../../back-end/driver/destroy.php' method='post'>
                          <a id='logout'> <input type='submit' value='Logout' id='logout'></a>
                       </form>";
                     }
@@ -39,11 +39,12 @@ $police = mysqli_query($connection, "SELECT * FROM policestations");
     <main class="police">
         <div id="map"></div>
     </main>
-    <script>
+    <!-- <script>
         var  infoWindow = new google.maps.infoWindow({
         content: '<h3> Bruce</h3>'
     });
-    </script>
+    </script> -->
+    <script> getLocation() </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7nOf7hBVVd1HvGyKEv-zIZGlNnBvc27Y&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
 </body>
 </html> 
