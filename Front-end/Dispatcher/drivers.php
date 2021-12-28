@@ -38,7 +38,6 @@ $taxiresult = mysqli_query($connection,"SELECT * FROM taxi");
                 <th>Email</th>
                 <th>Car Model</th>
                 <th>Number Plate</th> 
-                <th>Location</th>
             </tr>
 
         <?php
@@ -51,7 +50,6 @@ $taxiresult = mysqli_query($connection,"SELECT * FROM taxi");
                 <td><?php echo $driverrow['mail'];?></td>
                 <td><?php echo $taxirow['model'];?></td>
                 <td><?php echo $taxirow['plates'];?></td>
-                <td><a style="font-weight: 900; color: #FF8C40;" href="#">location</a></td>
             </tr>              
         <?php
             $i++;

@@ -68,6 +68,7 @@ $police = mysqli_query($connection, "SELECT * FROM policestations");
         </div>
         <div id="map"></div>
     </main>
+    <script> getLocation() </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7nOf7hBVVd1HvGyKEv-zIZGlNnBvc27Y&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
 </body>
 </html> 

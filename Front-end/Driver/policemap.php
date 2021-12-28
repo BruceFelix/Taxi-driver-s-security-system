@@ -37,13 +37,38 @@ $police = mysqli_query($connection, "SELECT * FROM policestations");
         </nav>
     </header>
     <main class="police">
+    <div class="left">
+        <?php
+        if(mysqli_num_rows($police) > 0 ) {
+        ?>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone number</th>
+                </tr>
+        <?php
+            $i=0;
+            while($row = mysqli_fetch_assoc($police)){
+        ?>
+                <tr>
+                    <td><a href=""><?php echo $row['name'];?></a></td>
+                    <td><a href="tel:"><?php echo $row['number'];?></a></td>
+                </tr>
+        <?php
+            $i++;
+            }
+        ?>
+            </table>
+        <?php
+            }
+            else{
+                echo "No results found.".mysqli_error($connection);
+            }
+        ?>
+        </div>
         <div id="map"></div>
     </main>
-    <!-- <script>
-        var  infoWindow = new google.maps.infoWindow({
-        content: '<h3> Bruce</h3>'
-    });
-    </script> -->
+
     <script> getLocation() </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7nOf7hBVVd1HvGyKEv-zIZGlNnBvc27Y&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cABD" async defer></script>
 </body>
