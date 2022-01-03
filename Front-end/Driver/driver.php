@@ -30,6 +30,7 @@
                       </form>";
                     }
                 ?>
+                <a href="tel:999">Help </a>
             </div>
         </nav>
     </header>
