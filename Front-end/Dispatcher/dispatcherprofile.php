@@ -7,6 +7,7 @@ if(isset($_SESSION['username'])){
     if(mysqli_num_rows($result) > 0 ) {
         $driversresult = mysqli_fetch_assoc($result);
     }
+    
 }    
 ?>
 <!DOCTYPE html>
