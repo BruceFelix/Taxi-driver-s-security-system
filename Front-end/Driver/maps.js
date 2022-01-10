@@ -22,7 +22,7 @@ function initMap(){
     new google.maps.Marker({
         position: location,
         map,
-        title: "My location",
+        content: "My location",
         zIndex: 1
     })
     //Array of markers 
@@ -90,9 +90,4 @@ function initMap(){
         });
     }
 }
-
-
-
-
-
- 
+}
